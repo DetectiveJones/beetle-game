@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ThirdPersonMovement : MonoBehaviour
-{
+{ 
+
     public CharacterController controller;
     public Transform cam;
 
     public float speed = 6f;
     public float turnSmoothing = 0.1f;
-    float turnSmoothVelocity;
+    float turnSmoothVelocity; 
 
     // Update is called once per frame
     void Update()
@@ -28,4 +30,6 @@ public class ThirdPersonMovement : MonoBehaviour
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
         }
     }
+
+    
 }
