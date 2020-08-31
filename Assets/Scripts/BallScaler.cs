@@ -55,6 +55,8 @@ public class BallScaler : MonoBehaviour
             Debug.Log("Position changed");
             //transform.Translate(0f, -0.5f, 0f);
             transform.position = new Vector3(transform.position.x, 0.15f, transform.position.z);
+            Debug.Log("Score +1");
+            Score.collectibleCount++;
         }
     }
 }
