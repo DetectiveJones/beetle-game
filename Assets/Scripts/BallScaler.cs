@@ -43,6 +43,10 @@ public class BallScaler : MonoBehaviour
         currScale = Mathf.Clamp(currScale, minSize, maxSize + 0.1f);
 
         targetScale = baseScale * currScale;
+
+        //Debug.Log("Position changed");
+        //transform.Translate(0f, -0.5f, 0f);
+        //transform.position = new Vector3(transform.position.x, 0.15f, transform.position.z);
     }
 
     void OnTriggerEnter(Collider other)
@@ -52,9 +56,6 @@ public class BallScaler : MonoBehaviour
             //other.gameObject.SetActive(false);
             Debug.Log("Scale Changed");
             ChangeSize(true);
-            Debug.Log("Position changed");
-            //transform.Translate(0f, -0.5f, 0f);
-            transform.position = new Vector3(transform.position.x, 0.15f, transform.position.z);
             Debug.Log("Score +1");
             Score.collectibleCount++;
         }
